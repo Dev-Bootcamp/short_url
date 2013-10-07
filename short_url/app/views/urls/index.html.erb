@@ -1,7 +1,7 @@
 <h3>Created by: <%= @user.name %></h3>
 
 <ul><% @user.urls.each do |url| %></ul>
-  <li><a href='<%= url.long %>'><%= url.long %></a>, shortened: <a href='<%= url.long %>'>/<%= url.short %></a></li>
+  <li><a href='<%= url.long %>'><%= url.long %></a>, shortened: <a href='<%= url.long %>'>/<%= url.short %></a> | <%= link_to '(delete this link)', user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></li>
 <% end %>
 
 <%= form_for @url do |f| %>
