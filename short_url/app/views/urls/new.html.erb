@@ -1,0 +1,11 @@
+<%= form_for @url do |f| %>
+<%= f.hidden_field :user_id, :value => params[:user_id] %>
+<p>
+  <%= f.label :long %><br>
+  <%= f.text_field :long %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
